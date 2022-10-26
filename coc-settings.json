@@ -1,0 +1,25 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"json",
+		"javascriptreact",
+		"xml",
+		"prisma",
+		"go",
+		"scss",
+		"gql",
+		"graphql"
+	],
+	"snippets.ultisnips.directories": [
+		"UltiSnips",
+		"~/.config/nvim/utils/snips"
+	],
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"prettier.arrowParens": "always",
+	"prettier.proseWrap": "always",
+	"suggest.floatEnable": true,
+	"suggest.enablePreview": true
+}
