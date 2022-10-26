@@ -30,6 +30,7 @@ let g:NERDTreeExtensionHighlightColor['css'] = s:blue
 let g:NERDTreeExtensionHighlightColor['go'] = s:blue
 let g:NERDTreeExtensionHighlightColor['lua'] = s:darkBlue
 let g:NERDTreeExtensionHighlightColor['vim'] = s:green
+let g:NERDTreeExtensionHighlightColor['py'] = s:blue
 
 let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
 let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
