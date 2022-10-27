@@ -19,6 +19,11 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'pangloss/vim-javascript'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'pantharshit00/vim-prisma'
@@ -45,6 +50,10 @@ let NERDTreeShowHidden=1
 " stop the cursor from jumping on buffer writes and saves
 let g:syntastic_auto_jump = 0
 
+" GO
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 " source configs from plug-config dir
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
 source $HOME/.config/nvim/plug-config/keybinds.vim
@@ -52,3 +61,4 @@ source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/multicursor.vim
+source $HOME/.config/nvim/plug-config/go-lc.vim

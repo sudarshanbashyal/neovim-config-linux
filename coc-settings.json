@@ -12,11 +12,8 @@
 		"gql",
 		"graphql"
 	],
-	"snippets.ultisnips.directories": [
-		"UltiSnips",
-		"~/.config/nvim/utils/snips"
-	],
-	"prettier.tabWidth": 4,
+	"snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
+	"prettier.tabWidth": 2,
 	"prettier.useTabs": true,
 	"prettier.arrowParens": "always",
 	"prettier.proseWrap": "always",
