@@ -1,5 +1,4 @@
 set number
-set relativenumber
 set nowrap
 set formatoptions-=t
 set cursorline
@@ -34,6 +33,8 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-surround'
+Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 " themes and stuff
@@ -50,10 +51,6 @@ let NERDTreeShowHidden=1
 " stop the cursor from jumping on buffer writes and saves
 let g:syntastic_auto_jump = 0
 
-" GO
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-
 " source configs from plug-config dir
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
 source $HOME/.config/nvim/plug-config/keybinds.vim
@@ -61,4 +58,4 @@ source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/multicursor.vim
-source $HOME/.config/nvim/plug-config/go-lc.vim
+" source $HOME/.config/nvim/plug-config/go-lc.vim
