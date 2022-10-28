@@ -2,11 +2,7 @@
 map <silent> <C-p> :call CocActionAsync('doHover') <CR>
 
 " auto-refresh nerdtree on focus
-map <C-n> :call NERDTreeToggleAndRefresh()<CR>
-
-function NERDTreeToggleAndRefresh()
-  :NERDTreeFocus
-endfunction
+map <C-n> :NERDTreeFocus<CR>
 
 " Normal keybindings
 inoremap kj <Esc>
@@ -40,7 +36,17 @@ tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
-" Switching splits
+" toggle between relative and no relative
+nnoremap   <silent>   <F10>   :call ToggleRelative()<CR>
+function! ToggleRelative()
+      if(&relativenumber==1)
+				set norelativenumber
+      else
+				set relativenumber
+    endif
+endfunction
+
+"Switching splits
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k

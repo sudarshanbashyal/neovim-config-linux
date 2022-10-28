@@ -1,4 +1,5 @@
 set number
+set relativenumber
 set nowrap
 set formatoptions-=t
 set cursorline
