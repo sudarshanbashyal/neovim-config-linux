@@ -1,13 +1,3 @@
-set number
-set relativenumber
-set nowrap
-set formatoptions-=t
-set cursorline
-set ignorecase 
-set scrolloff=20
-set clipboard=unnamedplus
-set scroll=10
-
 call plug#begin('~/.config/nvim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
@@ -40,23 +30,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
-" themes and stuff
-syntax enable
-set background=dark
-set termguicolors
-colorscheme nightfox
-let g:lightline = { 'colorscheme': 'nightfox' }
-let g:NERDTreeWinSize=40
-
-" nerd tree
-let NERDTreeShowHidden=1
-
-" stop the cursor from jumping on buffer writes and saves
-let g:syntastic_auto_jump = 0
-
 " source configs from plug-config dir
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
 source $HOME/.config/nvim/plug-config/harpoon.vim
+source $HOME/.config/nvim/plug-config/general.vim
 source $HOME/.config/nvim/plug-config/keybinds.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/coc.vim
