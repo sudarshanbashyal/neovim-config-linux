@@ -28,6 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'mg979/vim-visual-multi'
 Plug 'nvim-lua/plenary.nvim' 
 Plug 'ThePrimeagen/harpoon'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 " source configs from plug-config dir
@@ -37,8 +38,9 @@ source $HOME/.config/nvim/plug-config/general.vim
 source $HOME/.config/nvim/plug-config/keybinds.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/multicursor.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
+luafile $HOME/.config/nvim/plug-config/gitsigns.lua
+" source $HOME/.config/nvim/plug-config/signify.vim
 " source $HOME/.config/nvim/plug-config/go-lc.vim
