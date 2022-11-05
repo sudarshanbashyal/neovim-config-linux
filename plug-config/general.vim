@@ -7,6 +7,7 @@ set ignorecase
 set scrolloff=20
 set clipboard=unnamedplus
 set scroll=10
+set signcolumn=number
 
 " themes and stuff
 syntax enable

@@ -31,7 +31,6 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
-" source configs from plug-config dir
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
 source $HOME/.config/nvim/plug-config/harpoon.vim
 source $HOME/.config/nvim/plug-config/general.vim
