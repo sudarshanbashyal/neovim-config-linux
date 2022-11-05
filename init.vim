@@ -36,6 +36,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-surround'
 Plug 'mg979/vim-visual-multi'
+Plug 'nvim-lua/plenary.nvim' 
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 " themes and stuff
@@ -54,6 +56,7 @@ let g:syntastic_auto_jump = 0
 
 " source configs from plug-config dir
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
+source $HOME/.config/nvim/plug-config/harpoon.vim
 source $HOME/.config/nvim/plug-config/keybinds.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/coc.vim
