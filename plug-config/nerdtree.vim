@@ -1,3 +1,6 @@
+" auto-refresh nerdtree on focus
+map <C-n> :NERDTreeFocus<CR>
+
 " nerd tree highlighting 
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1

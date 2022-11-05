@@ -44,7 +44,7 @@ set background=dark
 set termguicolors
 colorscheme nightfox
 let g:lightline = { 'colorscheme': 'nightfox' }
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=40
 
 " nerd tree
 let NERDTreeShowHidden=1
@@ -59,4 +59,6 @@ source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/multicursor.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim
 " source $HOME/.config/nvim/plug-config/go-lc.vim
