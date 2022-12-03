@@ -29,11 +29,15 @@ function! ToggleRelative()
     endif
 endfunction
 
-"Switching splits
+" Switching splits
 nmap <C-h> <C-w>h
 nmap <C-e> <C-w>j
 nmap <C-y> <C-w>k
 nmap <C-l> <C-w>l
+
+" move cursor to middle of screen after jumping half page
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 " change scroll speed
 " nnoremap <C-e> 2<C-e>
