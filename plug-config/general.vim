@@ -8,13 +8,15 @@ set scrolloff=20
 set clipboard=unnamedplus
 set scroll=10
 set signcolumn=number
+set foldmethod=marker 
 
 " themes and stuff
 syntax enable
 set background=dark
 set termguicolors
-colorscheme nightfox
-let g:lightline = { 'colorscheme': 'nightfox' }
+colorscheme kanagawa
+
+let g:lightline = { 'colorscheme': 'pleasant' }
 let g:NERDTreeWinSize=40
 
 " nerd tree

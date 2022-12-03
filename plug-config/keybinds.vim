@@ -31,10 +31,10 @@ endfunction
 
 "Switching splits
 nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
+nmap <C-e> <C-w>j
+nmap <C-y> <C-w>k
 nmap <C-l> <C-w>l
 
 " change scroll speed
-nnoremap <C-e> 2<C-e>
-nnoremap <C-y> 2<C-y>
+" nnoremap <C-e> 2<C-e>
+" nnoremap <C-y> 2<C-y>

@@ -14,21 +14,22 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'pangloss/vim-javascript'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'pantharshit00/vim-prisma'
 Plug 'tpope/vim-commentary'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'itchyny/lightline.vim'
-Plug 'EdenEast/nightfox.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-surround'
 Plug 'mg979/vim-visual-multi'
 Plug 'nvim-lua/plenary.nvim' 
 Plug 'ThePrimeagen/harpoon'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'preservim/tagbar'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+
 call plug#end()
 
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
@@ -40,6 +41,20 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/multicursor.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/tagbar.vim
 luafile $HOME/.config/nvim/plug-config/gitsigns.lua
+luafile $HOME/.config/nvim/plug-config/lualine.lua
 " source $HOME/.config/nvim/plug-config/signify.vim
 " source $HOME/.config/nvim/plug-config/go-lc.vim
+
+" coc
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction	
+																									
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
