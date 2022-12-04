@@ -29,7 +29,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'nvim-lualine/lualine.nvim'
-
+Plug 'ThePrimeagen/vim-be-good'
 call plug#end()
 
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
