@@ -18,5 +18,9 @@
 	"prettier.arrowParens": "always",
 	"prettier.proseWrap": "always",
 	"suggest.floatEnable": true,
-	"suggest.enablePreview": true
+	"suggest.enablePreview": true,
+	"diagnostic.checkCurrentLine": true,
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"diagnostic.virtualTextLevel": "error"
 }
