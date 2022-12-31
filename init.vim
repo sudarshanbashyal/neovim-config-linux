@@ -30,6 +30,8 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'ThePrimeagen/vim-be-good'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
@@ -42,6 +44,7 @@ source $HOME/.config/nvim/plug-config/multicursor.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/tagbar.vim
+source $HOME/.config/nvim/plug-config/blamer.vim
 luafile $HOME/.config/nvim/plug-config/gitsigns.lua
 luafile $HOME/.config/nvim/plug-config/lualine.lua
 " source $HOME/.config/nvim/plug-config/signify.vim
@@ -56,5 +59,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction	
 																									
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"

@@ -1,5 +1,5 @@
 require('lualine').setup {
-    options={theme="seoul256"},
+    options={theme="kanagawa"},
 		sections = {
 			lualine_a = {'mode'},
 			lualine_b = {'filename'},
