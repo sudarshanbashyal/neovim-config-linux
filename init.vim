@@ -32,6 +32,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'APZelos/blamer.nvim'
+Plug 'tamton-aquib/duck.nvim'
 call plug#end()
 
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
@@ -45,6 +46,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/tagbar.vim
 source $HOME/.config/nvim/plug-config/blamer.vim
+source $HOME/.config/nvim/plug-config/duck.vim
 luafile $HOME/.config/nvim/plug-config/gitsigns.lua
 luafile $HOME/.config/nvim/plug-config/lualine.lua
 " source $HOME/.config/nvim/plug-config/signify.vim
