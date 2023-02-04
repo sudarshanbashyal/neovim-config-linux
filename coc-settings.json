@@ -28,5 +28,6 @@
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.virtualText": true,
 	"diagnostic.virtualTextCurrentLineOnly": false,
-	"diagnostic.virtualTextLevel": "error"
+	"diagnostic.virtualTextLevel": "error",
+	"snippets.ultisnips.usePythonx": false
 }
