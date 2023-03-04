@@ -9,6 +9,7 @@ set clipboard=unnamedplus
 set scroll=10
 set signcolumn=number
 set foldmethod=marker 
+set guicursor=n-v-c:hor20,i-ci-ve:ver25,r-cr:hor20,o:hor50
 
 " themes and stuff
 syntax enable
