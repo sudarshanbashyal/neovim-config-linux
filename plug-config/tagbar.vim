@@ -1,4 +1,4 @@
-nnoremap <leader>tt <cmd>:call ToggleTagbar()<cr>
+nnoremap <leader>t <cmd>:call ToggleTagbar()<cr>
 
 function ToggleTagbar()
   execute 'TagbarToggle'
