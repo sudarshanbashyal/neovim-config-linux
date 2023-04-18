@@ -5,6 +5,7 @@ map <silent> <C-p> :call CocActionAsync('doHover') <CR>
 inoremap kj <Esc>
 inoremap KJ <Esc>
 nmap <F2> <Plug>(coc-rename)
+nnoremap <C-x> <C-6>
 
 " Indentation/Tabs
 set smarttab
