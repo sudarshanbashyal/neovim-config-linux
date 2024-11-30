@@ -19,7 +19,17 @@ return {
 						callback = function()
 							-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
 							-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
-							vim.lsp.buf.format()
+							vim.lsp.buf.format({
+								async = false,
+								filter = function(c)
+									return c.id == client.id
+								end,
+							})
+
+							-- Re-enable diagnostics, following this:
+							-- https://www.reddit.com/r/neovim/comments/15dfx4g/help_lsp_diagnostics_are_not_being_displayed/?utm_source=share&utm_medium=web2x&context=3
+
+							vim.diagnostic.enable(bufnr)
 						end,
 					})
 				end
