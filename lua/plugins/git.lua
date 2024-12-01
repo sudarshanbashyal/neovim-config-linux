@@ -24,11 +24,10 @@ return {
 		config = function()
 			require("gitsigns").setup()
 			vim.keymap.set("n", "<leader>hh", ":Gitsigns preview_hunk<CR>", opts)
-			vim.keymap.set("n", "<C-b>", ":Gitsigns toggle_current_line_blame<CR>", opts)
+			vim.keymap.set("n", "<leader>bb", ":Gitsigns toggle_current_line_blame<CR>", opts)
 		end,
 	},
 	{
-		-- Powerful Git integration for Vim
 		"tpope/vim-fugitive",
 	},
 }

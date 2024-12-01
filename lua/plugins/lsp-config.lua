@@ -27,10 +27,34 @@ return {
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.html.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
 			vim.keymap.set("n", "<C-p>", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, {})
+		end,
+	},
+	{
+		"hrsh7th/cmp-nvim-lsp-signature-help",
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		opts = {},
+		config = function(_, opts)
+			require("lsp_signature").setup(opts)
 		end,
 	},
 }
