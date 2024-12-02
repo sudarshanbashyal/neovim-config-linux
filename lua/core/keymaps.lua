@@ -3,20 +3,12 @@ vim.g.maplocalleader = "\\"
 
 local opts = { noremap = true, silent = true }
 
--- save file
-vim.keymap.set("n", "<C-s>", "<cmd> w <CR>", opts)
-
 -- change modes
 vim.keymap.set("i", "kj", "<Esc>", opts)
 vim.keymap.set("i", "KJ", "<Esc>", opts)
 
 -- save file without auto-formatting
---
 vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", opts)
-vim.keymap.set("n", "<leader>s", "<cmd><CR>", opts) -- leader s was removing character for some reason
-
--- quit file
-vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
 
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x', opts)
