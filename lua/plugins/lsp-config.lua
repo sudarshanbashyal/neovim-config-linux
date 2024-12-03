@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "gopls" },
+				ensure_installed = { "lua_ls", "gopls", "vtsls", "prettier" },
 				auto_install = true,
 			})
 		end,
@@ -24,7 +24,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.ts_ls.setup({
+			lspconfig.vtsls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
@@ -57,4 +57,9 @@ return {
 			require("lsp_signature").setup(opts)
 		end,
 	},
+	-- {
+	-- 	"pmizio/typescript-tools.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	-- 	opts = {},
+	-- },
 }
