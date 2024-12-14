@@ -128,6 +128,14 @@ return {
 				[[<Cmd>:lua Cycle_terminals("prev")<CR>]],
 				{ noremap = true, silent = true }
 			)
+
+			-- key maps for renaming terminal
+			vim.api.nvim_set_keymap(
+				"t",
+				"<F2>",
+				[[<C-\><C-n>:ToggleTermSetName<CR>]],
+				{ noremap = true, silent = true }
+			)
 		end,
 	},
 }
